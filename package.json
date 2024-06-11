@@ -1,0 +1,49 @@
+{
+  "name": "movie-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "gh-pages": "^0.12.0",
+    "react-scripts": "0.8.4",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.26.1",
+    "concurrently": "^8.0.1",
+    "express": "^4.18.2",
+    "graphql": "^0.13.2",
+    "install": "^0.13.0",
+    "loadash": "0.0.1",
+    "lodash": "^4.17.4",
+    "mongodb": "^3.7.3",
+    "nodemon": "^1.19.4",
+    "npm": "^9.6.5",
+    "react": "^15.4.1",
+    "react-autosuggest": "^9.0.0",
+    "react-bootstrap": "^0.30.7",
+    "react-d3-basic": "^1.6.11",
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.0",
+    "redux-logger": "^2.8.0",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^2.4.0"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "server": "nodemon -w server server/server.js",
+    "compile": "babel src --out-dir public",
+    "start": "react-scripts start",
+    "dev": "concurrently \"npm run start\" \"npm run server\""
+  }
+}

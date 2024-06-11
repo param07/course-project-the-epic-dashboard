@@ -1,0 +1,49 @@
+scalar GraphQLDate
+input InputUser {
+	username: String!
+	password: String!
+	createDateTime: GraphQLDate!
+}
+
+type User {
+	id: Int!
+	username: String!
+}
+
+input LoginDetails {
+	username: String!
+	password: String!
+}
+
+type post{
+  post: String
+  username: String
+}
+type old {
+  title: String!
+  rating: String
+  year: Int
+  description: String
+  genre: [String]
+  trailer: String
+  image: String
+  imdbid: String
+  director: [String]
+  writers: [String]
+}
+input reviewfield {
+	post: String!
+	movieId: String!
+  username: String
+}
+type Query {
+  listoldmovies(year: String): [old]
+  genremovies(genre: [String]): [old]
+  getpost(movieId: String): [post]
+  getUser(loginDetails: LoginDetails!): User!
+}
+
+type Mutation {
+	addPost(post: reviewfield!): String!
+  addUser(userDetails: InputUser!): Boolean!
+}

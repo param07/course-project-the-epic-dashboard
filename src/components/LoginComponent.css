@@ -1,0 +1,32 @@
+.login-page-login-container{
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    width: 50vw;
+    margin: 10% 10%;
+    height: 50vh;
+}
+
+.login-page-login-container input{
+    border-radius: 20px;
+    margin: 0 25%;
+}
+
+.login-page-login-container label{
+    margin: 0 25%;
+}
+
+.login-page-login-container button{
+    width: 115px;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 10%
+}
+
+.login-page-login-container .button-container{
+    display: inline-flex;
+    padding-left: 32%;
+}
